@@ -36,7 +36,7 @@ class Board extends React.Component {
         }
         if (winner) {
             var movimento = this.state.pontuation;
-            alert("Você ganhou realizando " + movimento + " movimento (s)!");
+            alert("Você ganhou realizando " + (movimento + 1) + " movimento(s)!");
         }
     }
 
@@ -77,7 +77,10 @@ class Board extends React.Component {
         } else {
             var blankPosition = this.findBlankPosition(n['position']);
             if (blankPosition !== -1) {
-                this.state.pontuation += 1;
+                var pontuation = this.state.pontuation + 1;
+                // this.setState({pontuacao});
+                this.setState({ pontuation });
+                console.log(pontuation);
                 var boardState = [...this.state.boardState];
                 boardState[blankPosition] = n['value'];
                 boardState[n['position']] = 0;

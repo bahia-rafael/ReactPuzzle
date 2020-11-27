@@ -3,22 +3,16 @@ import './RestartButton.css';
 
 //props.value, props.click, props.position
 
-class RestartButton extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.text = props.text;
-        this.function = props.whenClicked;
-    }
+export default props => {
+    let text = props.text;
+    let funcao = props.whenClicked;
 
-    render() {
-        return (
-            <button className="restartButton" onClick={this.function}>
-                { this.text}
+    return (
+            <button className="restartButton" onClick={ funcao }>
+                { text}
             </button>
 
-        );
-    }
+    )
 }
 
-export default RestartButton;
