@@ -1,7 +1,7 @@
 # ReactPuzzle
 Creating the Puzzle 8 game using React
 
-#Run application
+## Run application
 
 - Use the command to install the project dependencies:
     - npm install
